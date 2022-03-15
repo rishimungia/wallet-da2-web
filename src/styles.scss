@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
+
+:root {
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+    border-right: 1px solid hsl(0, 0%, 85%);
+    display: block;
+    position: fixed;
+    inset: 0 auto auto 0;
+    width: 20rem;
+    height: 100vh;
+    padding: 2rem;
+
+    h1 {
+        padding: 2rem 0rem;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0;
+
+        li {
+            list-style: none;
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+    }
+}
+
+main {
+    width: calc(100vw - 25rem);
+    position: absolute;
+    right: 0;
+}
+
+.welcome {
+    margin: 2rem 0;
+    h1 {
+        padding: 0;
+        margin-bottom: 0;
+    }
+    p {
+        padding: 0;
+        margin: 0;
+        opacity: 0.5;
+    }
+}
+
+.dash-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+
+    .dash-card {
+        width: 100%;
+        height: 12rem;
+        border-radius: 45px;
+        padding: 2rem 2rem;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .num {
+            font-size: 2rem;
+            font-weight: 600;
+            opacity: 0.6;
+            margin-top: 1rem;
+        }
+
+        .progress {
+            aspect-ratio: 1;
+            height: 6rem;
+            aspect-ratio: 1;
+            border: 6px solid black;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            p {
+                font-weight: 800;
+            }
+        }
+    }
+
+    .dash-card:nth-of-type(1) {background: #FFEEE2;}
+    .dash-card:nth-of-type(2) {background: #EFFCEF;}
+    .dash-card:nth-of-type(3) {background: #E6F5F9;}
+    .dash-card:nth-of-type(4) {background: #F4F6FA;}
+}
+
+.stock-list {
+    padding: 2rem 0rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    li {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+        border-radius: 25px;
+        padding: 1rem 2rem;
+        position: relative;
+
+        .price {
+            position: absolute;
+            right: 2rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    li:nth-of-type(even) {background: #F4F6FA;}
+    li:nth-of-type(odd) {background: #E6F5F9;}
+}
