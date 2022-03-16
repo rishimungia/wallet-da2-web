@@ -123,3 +123,116 @@ main {
     li:nth-of-type(even) {background: #F4F6FA;}
     li:nth-of-type(odd) {background: #E6F5F9;}
 }
+
+.customer-grid-container {
+    max-width: min-content;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 2.5rem;
+
+    .customer-card {
+        width: 20rem;
+        aspect-ratio: 9 / 12;
+        background: #F4F6FA;
+        padding: 2rem;
+        border-radius: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        
+        img {
+            border-radius: 50%;
+            width: 12rem;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-weight: 400;
+            text-align: center;
+        }
+        p {
+            margin-top: -1rem;
+        }
+
+        button {
+            margin-top: 1rem;
+            border: none;
+            background: hsl(220, 37%, 47%);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+.cust-details-container {
+    position: fixed;
+    inset: 50% auto auto 50%;
+    z-index: 15;
+
+    width: 60%;
+    background: #FFF;
+    border-radius: 50px;
+    padding: 2rem;
+
+    opacity: 0;
+    transform: translate(-50%, 2rem);
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+
+    h2 {
+        color: hsl(220, 37%, 47%);
+    }
+
+    button {
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        border: none;
+        border-radius: 50%;
+        width: 2.2rem;
+        aspect-ratio: 1;
+        cursor: pointer;
+    }
+
+    ul {
+        padding: 0;
+
+        li {
+            list-style: none;
+            padding: 1rem 0rem;
+            border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            h1 {
+                font-weight: 400;
+                font-size: 1.5rem;
+            }
+
+            .pur-date {
+                position: absolute;
+                right: 0;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+.cust-details-bg {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: hsla(0, 0%, 20%, 0.8);
+    z-index: 10;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+}
