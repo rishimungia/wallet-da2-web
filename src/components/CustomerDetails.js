@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import customerData from '../data/CustomerData'
 
 export default function customerDetails({custScreen, setCustScreen}) {
